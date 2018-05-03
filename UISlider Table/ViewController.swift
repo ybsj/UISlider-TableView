@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-
     @IBOutlet weak var mySlider: UISlider!
     
     @IBOutlet weak var myTableView: UITableView!
@@ -38,8 +37,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let identifier = "RE"
         let cell = myTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-        
-//        cell.textLabel?.text = String(Int(mySlider.value))
         let tableValue = String(Int(mySlider.value * 100) + indexPath.row)
         cell.textLabel?.text = tableValue
         return  cell
